@@ -169,6 +169,10 @@
     .bscard:hover img {
       transform: scale(1.2);
     }
+    #header{
+      color: white;
+      background-color: black;
+    }
   </style>
 
 
@@ -255,37 +259,49 @@
 
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top" >
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="#" style="color: black;" class="logo">Healthyfy</a>
+      <a href="#" style="color: white;" class="logo">Healthyfy</a>
 
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
-        <ul class="navbar">
+        <ul class="navbar" style="
+        color: white;">
 
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#services">Detection</a></li>
-          <li><a href="#solutions">Solution</a></li>
-          <li><a href="#testimonials">Motivation</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="#hero" style="
+      color: white;">Home</a></li>
+          <li><a href="#services" style="
+      color: white;">Detection</a></li>
+          <li><a href="#solutions" style="
+      color: white;">Solution</a></li>
+          <li><a href="#testimonials" style="
+      color: white;">Motivation</a></li>
+          <li><a href="#contact" style="
+      color: white;">Contact</a></li>
+          <li><a href="#footer" style="
+      color: white;">Contact</a></li>
           {% if current_user.is_authenticated and current_user.usn %}
-          <li class="dropdown"><a href="/login"><span>Welcome {{current_user.usn}}</span> <i
+          <li class="dropdown"><a href="/login" style="
+      color: white;"><span>Welcome {{current_user.usn}}</span> <i
                 class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="/logout">Logout</a></li>
+              <li><a href="/logout" style="
+                color: white;">Logout</a></li>
 
             </ul>
           </li>
           {% else %}
-          <li class="dropdown"><a href="#"><span>SIGN IN</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#" style="
+            color: white;"><span>SIGN IN</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="/signup">Sign Up</a></li>
+              <li><a href="/signup" style="
+                color: white;">Sign Up</a></li>
 
-              <li><a href="/login">Login</a></li>
+              <li><a href="/login" style="
+                color: white;">Login</a></li>
             </ul>
           </li>
           {% endif %}
@@ -296,7 +312,8 @@
           <!-- <div class="bx bx-moon" id="darkmode"></div> -->
 
         </ul>
-      </nav><!-- .navbar -->
+      </nav>
+      <!-- .navbar -->
 
       {% block body %}
 
@@ -314,7 +331,7 @@
 
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section id="hero" style="background-color: black;color:white;" class="d-flex align-items-center">
 
     <div class="container">
       <div class="row">
@@ -323,8 +340,8 @@
           <img src="assets/img/intro-img.svg" class="img-fluid animated" alt="">
         </div>
         <div class="col-lg-6 pt-5 pt-lg-0 order-1 order-lg-2 d-flex flex-column justify-content-center margin-left-5">
-          <h1>Healthyfy </h1>
-          <h2>A one stop solution to all your mental issues ! <br> We analyze the psychological and mental health
+          <h1 style="color:white;">Healthyfy </h1>
+          <h2 style="color:white;">A one stop solution to all your mental issues ! <br> We analyze the psychological and mental health
             conditions and provide effective solutions <h2>
               <div class="d-flex">
                 <a href="#services" class="btn-get-started scrollto" style="text-decoration: none;">Get Started</a>
@@ -344,7 +361,7 @@
 
   <main id="main">
 
-    <section id="about" class="about">
+    <!-- <section id="about" class="about">
       <div class="container">
         <div class="section-title">
           <span>About Us</span>
@@ -375,9 +392,9 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
 
-    <section id="services" class="services section-bg">
+    <section id="services" class="services section-bg" style="background-color: whitesmoke;">
       <div class="container">
         <div class="section-title">
           <span>Services</span>
@@ -727,6 +744,16 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main-home.js"></script>
 
+
+  <!-- <script>
+    $(function () {
+    $(document).scroll(function () {
+      var $nav = $(".header");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+  });
+  </script> -->
 </body>
+
 
 </html>
