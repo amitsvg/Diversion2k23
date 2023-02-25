@@ -130,6 +130,7 @@
     .contact-button:hover {
       background: var(--hover);
     }
+
     .bscard {
       background-color: rgba(82, 16, 224, 0.25);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -148,7 +149,7 @@
 
     .img12:hover {
       cursor: pointer;
-      transform: scale(1.03);
+      /* transform: scale(1.03); */
       transition-timing-function: ease-out;
       transition-timing-function: linear;
       transition-timing-function: ease;
@@ -158,6 +159,15 @@
 
     .textc {
       font-size: small;
+    }
+
+    .bscard img {
+      transition: 0.6s;
+    }
+    
+
+    .bscard:hover img {
+      transform: scale(1.2);
     }
   </style>
 
@@ -369,7 +379,6 @@
 
     <section id="services" class="services section-bg">
       <div class="container">
-
         <div class="section-title">
           <span>Services</span>
           <h2>Services</h2>
@@ -447,84 +456,46 @@
     </section>
     <section id="solutions" class="services section-bg">
       <div class="container">
-
         <div class="section-title" style="margin-top: 10px;">
           <span>Solutions</span>
           <h2>Solutions</h2>
         </div>
+        <div class="row gy-5" style="display:flex; justify-content: space-around; margin-bottom: 30px;">
 
-
-        <div class="row gy-5">
-
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-            <div class="service-item">
-              <div class="img">
-                <img src="services/music.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-bounding-box-circles"></i>
-                </div>
-                <a href="{{url_for('music')}}" class="stretched-link">
-                  <h3>Music Therapy</h3>
-                </a>
-                <p>Music is a Therapy which acts as a medicine. Visit this section and improve your mood as Music has
-                  the
-                  healing power..</p>
-                <a href="{{url_for('music')}}" class="stretched-link"></a>
-              </div>
+          <div class="card bscard" style="width: 18rem;">
+            <img class="card-img-top img12" src="services/analysis.jpg" class="img-fluid" alt="img dalo">
+            <div class="card-body">
+              <h5 class="card-title">Music Therapy</h5>
+              <p class="card-text textc">Music is a Therapy which acts as a medicine. Visit this section and improve your mood as Music has
+                the
+                healing power..</p>
+              <a href="{{url_for('music')}}" class="btn btn-primary">Detect</a>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
-            <div class="service-item">
-              <div class="img">
-                <img src="services/games.png" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-calendar4-week"></i>
-                </div>
-                <a href="{{url_for('quizandgame')}}" class="stretched-link">
-                  <h3>Quiz and Fun Games</h3>
-                </a>
-                <p>Quizzes will help the user to increase their knowledge and brainstorming skills. Our Game will help
-                  the
-                  user to test their concentration power.</p>
-                <a href="{{url_for('quizandgame')}}" class="stretched-link"></a>
-              </div>
+          <div class="card bscard" style="width: 18rem;">
+            <img class="card-img-top img12" src="services/analysis.jpg" class="img-fluid" alt="img dalo">
+            <div class="card-body">
+              <h5 class="card-title">Quiz and Fun Games</h5>
+              <p class="card-text textc">Quizzes will help the user to increase their knowledge and brainstorming skills. Our Game will help
+                the
+                user to test their concentration power.</p>
+              <a href="{{url_for('quizandgame')}}" class="btn btn-primary">Detect</a>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
-            <div class="service-item">
-              <div class="img">
-                <img src="services/yoga.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-chat-square-text"></i>
-                </div>
-                <a href="{{url_for('exercises')}}" class="stretched-link">
-                  <h3>Exercises</h3>
-                </a>
-                <p>Health is not about the weight you lose but about the life you gain.
-                  Your body and mind both will be flexible and relaxed by doing Yoga</p>
-                <a href="{{url_for('exercises')}}" class="stretched-link"></a>
-              </div>
+          <div class="card bscard" style="width: 18rem;">
+            <img class="card-img-top img12" src="services/analysis.jpg" class="img-fluid" alt="img dalo">
+            <div class="card-body">
+              <h5 class="card-title">Exercises</h5>
+              <p class="card-text textc">Health is not about the weight you lose but about the life you gain.
+                Your body and mind both will be flexible and relaxed by doing Yoga</p>
+              <a href="{{url_for('exercises')}}" class="btn btn-primary">Detect</a>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
         </div>
-
-
-
-
-
       </div>
-
-
-
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
