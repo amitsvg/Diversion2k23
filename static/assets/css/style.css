@@ -494,7 +494,9 @@ section {
 }
 
 .section-bg {
-  background-color: #f9f9fa;
+  /* background-color: #f9f9fa; */
+  background-color: #e6e0e0;
+  box-shadow: rgb(50 50 93 / 25%) 0px 16px 14px -19px inset, rgb(0 0 0 / 20%) 0px 20px 40px -10px inset
 }
 
 .section-title {
